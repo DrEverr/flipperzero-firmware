@@ -26,13 +26,13 @@ COPRO_CUBE_DIR = "lib/STM32CubeWB"
 
 # Default radio stack
 COPRO_STACK_BIN = "stm32wb5x_BLE_Stack_light_fw.bin"
-# Firmware also supports "ble_full", but it might not fit into debug builds
-COPRO_STACK_TYPE = "ble_light"
+# Firmware also supports "ble_full", but it might not fit into debug builds ble_light
+COPRO_STACK_TYPE = "ble_full"
 
 # Leave 0 to let scripts automatically calculate it
 COPRO_STACK_ADDR = "0x0"
 
-# If you override COPRO_CUBE_DIR on commandline, override this as well
+# If you override COPRO_CUBE_DIR on commandline, override this aswell
 COPRO_STACK_BIN_DIR = posixpath.join(
     COPRO_CUBE_DIR,
     "Projects",
@@ -81,6 +81,7 @@ FIRMWARE_APPS = {
         "basic_services",
         "updater_app",
         "unit_tests",
+        "nfc",
     ],
 }
 
